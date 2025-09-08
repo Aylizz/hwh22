@@ -1,0 +1,32 @@
+public class homework3 {
+    public static void main(String[] args) {
+
+        double[] numbers = {8.0, 5.5, -2.0, -4.0, 2.0, 3.0, 6.0, -7.0, 4.5, -1.2, 7.3, -3.6, 2.2, 1.1, -9.9};
+
+        boolean firstNegativeFound = false;
+        double sum = 0.0;
+        int count = 0;
+
+        for (double num : numbers) {
+            System.out.println("Number: " + num + " | flag (before) = " + firstNegativeFound);
+            if (!firstNegativeFound) {
+                if (num < 0) {
+                    firstNegativeFound = true;
+                }
+            } else {
+                if (num > 0) {
+                    sum += num;
+                    count++;
+                }
+
+            }
+        }
+
+        if (count > 0) {
+            System.out.println("average arithmetic positive number after first negative number");
+        } else {
+            System.out.println("No positive numbers after the first negative.");
+        }
+    }
+}
+
